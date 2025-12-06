@@ -1,7 +1,17 @@
 {
   "extends": "@repo/typescript-config/vite.json",
-  "include": ["src"],
   "compilerOptions": {
-    "jsx": "react-jsx"
-  }
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "routeConfig.ts",
+    "src/routes"
+  ]
 }
